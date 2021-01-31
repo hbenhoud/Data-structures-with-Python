@@ -18,6 +18,9 @@ class LinkedList:
     self.length = 0
   
   def push(self, value):
+    """
+    Add new node to the tail
+    """
     if self.head == None:
       self.head = Node(value)
       self.tail = self.head
@@ -30,6 +33,9 @@ class LinkedList:
     self.length = self.length + 1
 
   def pop(self, index):
+    """
+    Pop node by index
+    """
     if index < 0 or index >= self.length:
       raise "Index out of range"
     node = self.head
@@ -49,12 +55,18 @@ class LinkedList:
     self.length = self.length - 1
   
   def next(self):
+    """
+    Go to the next node
+    """
     if self.current and self.current.next:
       self.current = self.current.next
       return True
     return False
 
   def previous(self):
+    """
+    Go to the previous node
+    """
     if self.current and self.current.prev:
       self.current = self.current.prev
       return True
@@ -63,7 +75,10 @@ class LinkedList:
   def reset(self):
     self.current = self.head
 
-  def at(self, index): 
+  def at(self, index):
+    """
+    Get node by index
+    """
     if index < 0 or index >= self.length:
       raise "Index out of range"
     node = self.head
@@ -75,6 +90,9 @@ class LinkedList:
       i = i+1
   
   def __str__(self):
+    """
+    Get lists dara as string value
+    """
     values = ""
     node = self.head
     while node:
