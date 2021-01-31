@@ -88,7 +88,7 @@ class LinkedList:
   
   def __str__(self):
     """
-    Get lists dara as string value
+    Get data as string value
     """
     values = ""
     node = self.head
