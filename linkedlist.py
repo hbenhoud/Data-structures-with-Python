@@ -71,9 +71,6 @@ class LinkedList:
       self.current = self.current.prev
       return True
     return False
-  
-  def reset(self):
-    self.current = self.head
 
   def at(self, index):
     """
